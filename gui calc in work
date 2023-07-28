@@ -1,0 +1,116 @@
+from tkinter import *
+
+root = Tk()
+root.title("Gui calculator ")
+
+def click1(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(1, str(current) + str(number))
+    
+def click2(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(2, str(current) + str(number))
+    
+def click3(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(3, str(current) + str(number))
+    
+def click4(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(4, str(current) + str(number))    
+
+def click5(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(5, str(current) + str(number))
+    
+def click6(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(6, str(current) + str(number))
+    
+def click7(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(7, str(current) + str(number))
+    
+def click8(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(8, current + number)
+    
+def click9(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(9, current + number)
+    
+def click0(number):
+    #border.delete(0, END)
+    current = border.get()
+    border.insert(0, current + number)
+    
+def clickA():
+    border.delete(0, END)
+    
+    
+def clickE():
+    border.delete(0, END)
+    
+def clickC():
+    border.delete(0, END)
+    
+
+
+
+#making the entry box
+border = Entry(root, borderwidth = 5, width=35)
+border.grid(column = 0 , row = 0 , columnspan = 3 , padx=10, pady = 10)
+
+#making the buttons
+button1 = Button(root, text = '1', padx = 40, pady = 20, command =lambda: click1(1))
+button2 = Button(root, text = '2', padx = 40, pady = 20, command =lambda: click2(2))
+button3 = Button(root, text = '3', padx = 40, pady = 20, command =lambda: click3(3))
+button4 = Button(root, text = '4', padx = 40, pady = 20, command =lambda: click4(4))
+button5 = Button(root, text = '5', padx = 40, pady = 20, command =lambda: click5(5))
+button6 = Button(root, text = '6', padx = 40, pady = 20, command =lambda: click6(6))
+button7 = Button(root, text = '7', padx = 40, pady = 20, command =lambda: click7(7))
+button8 = Button(root, text = '8', padx = 40, pady = 20, command =lambda: click8(8))
+button9 = Button(root, text = '9', padx = 40, pady = 20, command =lambda: click9(9))
+button0 = Button(root, text = '0', padx = 40, pady = 20, command =lambda: click0(0))
+
+buttonAdd = Button(root, text = '+', padx = 100, pady = 20, command =lambda: clickA())
+buttonClear = Button(root, text = 'CLEAR', padx = 29, pady = 20, command =lambda: clickC)
+buttonEquals = Button(root, text = '=', padx = 40, pady = 20, command =lambda: clickE)
+
+button1.grid(row=3, column=0)
+button2.grid(row=3, column=1)
+button3.grid(row=3, column=2)
+
+button4.grid(row=2, column=0)
+button5.grid(row=2, column=1)
+button6.grid(row=2, column=2)
+
+button7.grid(row=1, column=0)
+button8.grid(row=1, column=1)
+button9.grid(row=1, column=2)
+button0.grid(row=4, column=0)
+
+buttonAdd.grid(row=5, columnspan=4)
+buttonClear.grid(row=4, column=2)
+buttonEquals.grid(row=4, column=1)
+
+
+
+
+
+
+
+
+
+
+
+root.mainloop()
